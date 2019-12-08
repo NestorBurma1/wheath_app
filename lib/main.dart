@@ -1,9 +1,9 @@
-import 'package:async/async.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:wheath_app/provaider/weather_provaider.dart';
 
-void main(){
+
+void main() async {
+  Map data = await WeatherProvaider().getAllData();
   runApp(
     MaterialApp(
       home: Scaffold(
